@@ -6,12 +6,11 @@ class LoginPage:
     def __init__(self, driver):
         self.driver = driver
 
-    # Locators
     username_field = (By.ID, "user-name")
     password_field = (By.ID, "password")
     login_button = (By.ID, "login-button")
+    error_message = (By.CSS_SELECTOR, "h3[data-test='error']")
 
-    # Actions
     def enter_username(self, username):
         self.driver.find_element(*self.username_field).send_keys(username)
 
@@ -20,3 +19,6 @@ class LoginPage:
 
     def click_login(self):
         self.driver.find_element(*self.login_button).click()
+
+    def get_error_message(self):
+        return self.driver.find_element(*self.error_message).text
