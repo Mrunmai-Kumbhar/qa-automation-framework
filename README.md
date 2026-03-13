@@ -1,5 +1,7 @@
 # QA Automation Framework
 
+**Python | Selenium | PyTest | Postman | API Testing | UI Automation**
+
 This project demonstrates a complete QA automation workflow using **Selenium WebDriver, PyTest, and Postman**.  
 It includes **UI automation tests, API testing, manual test cases, and bug reporting** to simulate a real QA process.
 
@@ -7,15 +9,17 @@ It includes **UI automation tests, API testing, manual test cases, and bug repor
 
 ## Project Overview
 
-The framework automates testing for a sample e-commerce application using:
+This framework automates testing for a sample e-commerce application and demonstrates how modern QA automation frameworks are structured.
+
+Key components used in the project:
 
 - Selenium WebDriver for UI automation
 - PyTest for test execution
 - Page Object Model (POM) design pattern
 - PyTest fixtures for driver management
-- pytest-html for test reporting
-- Python requests for API automation
-- Postman for API testing
+- pytest-html for automated test reporting
+- Python requests library for API automation
+- Postman for manual API testing
 - Manual test case documentation
 - JIRA-style bug reporting
 
@@ -23,38 +27,38 @@ The framework automates testing for a sample e-commerce application using:
 
 ## Project Structure
 
-
+```
 qa-automation-framework
 │
 ├── pages
-│ ├── login_page.py
-│ └── inventory_page.py
+│   ├── login_page.py
+│   └── inventory_page.py
 │
 ├── tests
-│ ├── ui_tests
-│ │ ├── test_login.py
-│ │ ├── test_invalid_login.py
-│ │ └── test_add_to_cart.py
-│ │
-│ └── api_tests
-│ └── test_products_api.py
+│   ├── ui_tests
+│   │   ├── test_login.py
+│   │   ├── test_invalid_login.py
+│   │   └── test_add_to_cart.py
+│   │
+│   └── api_tests
+│       └── test_products_api.py
 │
 ├── postman_collections
-│ └── products_api_collection.json
+│   └── products_api_collection.json
 │
 ├── testcases
-│ └── login_test_cases.xlsx
+│   └── login_test_cases.xlsx
 │
 ├── bug_reports
-│ └── login_error_bug.md
+│   └── login_error_bug.md
 │
 ├── reports
-│ └── report.html
+│   └── report.html
 │
 ├── conftest.py
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
@@ -67,7 +71,7 @@ qa-automation-framework
 
 ### API Tests
 - Fetch Products API
-- Validate response status
+- Validate API response status
 - Validate response structure
 
 ### Manual Test Cases
@@ -96,74 +100,77 @@ qa-automation-framework
 
 ### 1. Clone the Repository
 
-
-git clone <your-repo-url>
-
+```bash
+git clone https://github.com/Mrunmai-Kumbhar/qa-automation-framework.git
+```
 
 ---
 
 ### 2. Create Virtual Environment
 
-
+```bash
 python -m venv venv
+```
 
+Activate the environment:
 
-Activate environment:
-
-
+```bash
 venv\Scripts\activate
-
+```
 
 ---
 
 ### 3. Install Dependencies
 
-
+```bash
 pip install -r requirements.txt
-
+```
 
 ---
 
-### 4. Run Tests
+### 4. Run the Tests
 
-
+```bash
 pytest --html=reports/report.html
-
+```
 
 ---
 
 ## Sample Test Report
 
-The framework generates HTML reports using pytest-html.
+The framework generates HTML reports using **pytest-html**.
 
-Example output:
+Example test output:
 
-
+```
+====================
 5 Passed
 0 Failed
 0 Errors
-
+====================
+```
 
 ---
 
 ## QA Workflow Demonstrated
 
-This project simulates a real QA workflow:
-
-
+```
 Test Case Design
-↓
+      ↓
 UI Automation (Selenium)
-↓
+      ↓
 API Testing (Postman + Python)
-↓
+      ↓
 Bug Reporting
-↓
+      ↓
 Test Execution Reports
-
+```
 
 ---
 
 ## Author
 
-Mrunmai Kumbhar
+**Mrunmai Kumbhar**
+
+GitHub:  
+https://github.com/Mrunmai-Kumbhar
